@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CA24C05-7611-4B83-B986-78505B26F607}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Contexto</RootNamespace>
+    <AssemblyName>Contexto</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasySoft.Util, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8dde93529f4dee62, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Servicio\dlls\EasySoft.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bdgeneral\bdGenralContextoFarmacia.cs" />
+    <Compile Include="bdgeneral\OFICINAMap.cs" />
+    <Compile Include="bdgeneral\OFICINA_IPServerMap.cs" />
+    <Compile Include="Catalogo\CatalogoContextoMatriz.cs" />
+    <Compile Include="Digitalizacion\DigitalizacionContextoMatriz.cs" />
+    <Compile Include="Digitalizacion\tbl_ConfiguracionesMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\EasyContextoMatriz.cs" />
+    <Compile Include="EasyGestionEmpresarial\EasyContextoFarmacia.cs" />
+    <Compile Include="bdgeneral\OFICINA_IPMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\EasyContextoOffline.cs" />
+    <Compile Include="EasyGestionEmpresarial\GEN_MovTraspasosDevoluciones_CabMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticuloCadenaFrioMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_DetalleTransferenciaBC.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_TemperaturaTraspaso_detMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_TemperaturaTraspaso_cabMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ConsultarArtituloInventarioTotalMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\Pa_EquipararBodegaFarmaciaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_TraspasosFarmaciaOffLineMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_BuscarConfiguracionSegmentoArticuloMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ValidarTraspasoCFMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_IpServidorMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_AuditoriaAppMovilMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_ControlPlanificacionesMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_ImpresionEtiquetasMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_PendientesVerificacionMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_TraspasoVerifMercaderia_DetMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_TraspasoInformeMercaderiaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODETOFFLINEMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCABOFFLINEMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOVERIFMERCADERIAMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_detallefactMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_maestrofactMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticulosPlanificacionResumenMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\TablasMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_par_UsuarioNotificacionInconsistenciaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_UsuarioMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_tablasMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticulosPlanificacionMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_DatosUsuarioMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_GEN_GenerarKardexFarmaciaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_GEN_GenerarKardexMatrizMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_RegistroAppMovilMap.cs" />
+    <Compile Include="EasySeguridad\AtribucionesMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_TraspasosFarmaciaMap.cs" />
+    <Compile Include="Catalogo\PA_ObtenerFotoArticuloMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_maestromovinventMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_movinventMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_tmp_RecepcionMercaderiaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCABFarmaciaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODETFarmaciaMap.cs" />
+    <Compile Include="EasySeguridad\EasySeguridadContextoFarmacia.cs" />
+    <Compile Include="Inconsistencias\tbl_detalle_inco_bodegaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_USUARIOMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_VerificacionIpFarmaciaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_PlanificacionesMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_ARTICULOSMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_DESCUENTOCABMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_DESCUENTODETMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_FACTURACIONMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_INVENTARIOMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_OFICINASMap.cs" />
+    <Compile Include="Inconsistencias\tbl_motivoMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_articulos_codigosbarraMap.cs" />
+    <Compile Include="Inconsistencias\tbl_inco_bodegaMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODETMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCABMap.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_articulosMap.cs" />
+    <Compile Include="Inconsistencias\InconsistenciasContextoMatriz.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{872ae400-3a84-4e2f-b9dd-a620f2ecbb78}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

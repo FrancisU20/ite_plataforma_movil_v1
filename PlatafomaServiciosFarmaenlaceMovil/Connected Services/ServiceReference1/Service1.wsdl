@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Configuracion" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Entidades.bdgeneral" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Configuracion.Librerias" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Servicio.Models" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Configuracion.Models" />
+      <xsd:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ips_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ips" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ips_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AutentificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutentificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AutentificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutentificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListadoPlanificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoPlanificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListadoPlanificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoPlanificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListadoArticulosPlanificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoArticulosPlanificacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListadoArticulosPlanificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoArticulosPlanificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RestringirArticulosContar_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestringirArticulosContar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RestringirArticulosContar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestringirArticulosContarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPlanificacionaContar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPlanificacionaContar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPlanificacionaContar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPlanificacionaContarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubirConteoInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubirConteoInventario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubirConteoInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubirConteoInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TraspasosFarmacia_InputMessage">
+    <wsdl:part name="parameters" element="tns:TraspasosFarmacia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TraspasosFarmacia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TraspasosFarmaciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DetalleTraspasos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleTraspasos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DetalleTraspasos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleTraspasosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarArticuloTraspaso_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarArticuloTraspaso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarArticuloTraspaso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarArticuloTraspasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificarTraspasoKardexFarmacia_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarTraspasoKardexFarmacia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificarTraspasoKardexFarmacia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarTraspasoKardexFarmaciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GenerarKardex_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarKardex" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GenerarKardex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarKardexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImagenArticulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImagenArticulo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImagenArticulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImagenArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GuardarTemporal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTemporal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GuardarTemporal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTemporalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RecuperarTemporal_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarTemporal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RecuperarTemporal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarTemporalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminarTemporal_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTemporal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminarTemporal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTemporalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cookie_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cookie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cookie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CookieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Servidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Servidor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Servidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificarFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificarFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Digitalizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Digitalizacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Digitalizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DigitalizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificacionCajas_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionCajas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerificacionCajas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionCajasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GuardarPendientesVerificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPendientesVerificacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GuardarPendientesVerificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPendientesVerificacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Test" message="tns:IService1_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TestResponse" message="tns:IService1_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ips">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ips" message="tns:IService1_Ips_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IpsResponse" message="tns:IService1_Ips_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutentificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AutentificarUsuario" message="tns:IService1_AutentificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AutentificarUsuarioResponse" message="tns:IService1_AutentificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoPlanificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListadoPlanificaciones" message="tns:IService1_ListadoPlanificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListadoPlanificacionesResponse" message="tns:IService1_ListadoPlanificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoArticulosPlanificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListadoArticulosPlanificacion" message="tns:IService1_ListadoArticulosPlanificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListadoArticulosPlanificacionResponse" message="tns:IService1_ListadoArticulosPlanificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestringirArticulosContar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RestringirArticulosContar" message="tns:IService1_RestringirArticulosContar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RestringirArticulosContarResponse" message="tns:IService1_RestringirArticulosContar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPlanificacionaContar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarPlanificacionaContar" message="tns:IService1_ActualizarPlanificacionaContar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarPlanificacionaContarResponse" message="tns:IService1_ActualizarPlanificacionaContar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubirConteoInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SubirConteoInventario" message="tns:IService1_SubirConteoInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SubirConteoInventarioResponse" message="tns:IService1_SubirConteoInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TraspasosFarmacia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TraspasosFarmacia" message="tns:IService1_TraspasosFarmacia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TraspasosFarmaciaResponse" message="tns:IService1_TraspasosFarmacia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleTraspasos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DetalleTraspasos" message="tns:IService1_DetalleTraspasos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DetalleTraspasosResponse" message="tns:IService1_DetalleTraspasos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArticuloTraspaso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuscarArticuloTraspaso" message="tns:IService1_BuscarArticuloTraspaso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuscarArticuloTraspasoResponse" message="tns:IService1_BuscarArticuloTraspaso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarTraspasoKardexFarmacia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerificarTraspasoKardexFarmacia" message="tns:IService1_VerificarTraspasoKardexFarmacia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerificarTraspasoKardexFarmaciaResponse" message="tns:IService1_VerificarTraspasoKardexFarmacia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarKardex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GenerarKardex" message="tns:IService1_GenerarKardex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GenerarKardexResponse" message="tns:IService1_GenerarKardex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImagenArticulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ImagenArticulo" message="tns:IService1_ImagenArticulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ImagenArticuloResponse" message="tns:IService1_ImagenArticulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarTemporal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GuardarTemporal" message="tns:IService1_GuardarTemporal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GuardarTemporalResponse" message="tns:IService1_GuardarTemporal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTemporal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RecuperarTemporal" message="tns:IService1_RecuperarTemporal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RecuperarTemporalResponse" message="tns:IService1_RecuperarTemporal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTemporal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminarTemporal" message="tns:IService1_EliminarTemporal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminarTemporalResponse" message="tns:IService1_EliminarTemporal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cookie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Cookie" message="tns:IService1_Cookie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CookieResponse" message="tns:IService1_Cookie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Servidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Servidor" message="tns:IService1_Servidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ServidorResponse" message="tns:IService1_Servidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerificarFactura" message="tns:IService1_VerificarFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerificarFacturaResponse" message="tns:IService1_VerificarFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Digitalizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Digitalizacion" message="tns:IService1_Digitalizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DigitalizacionResponse" message="tns:IService1_Digitalizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionCajas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerificacionCajas" message="tns:IService1_VerificacionCajas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerificacionCajasResponse" message="tns:IService1_VerificacionCajas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPendientesVerificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GuardarPendientesVerificacion" message="tns:IService1_GuardarPendientesVerificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GuardarPendientesVerificacionResponse" message="tns:IService1_GuardarPendientesVerificacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Service1" />
+</wsdl:definitions>

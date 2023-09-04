@@ -1,0 +1,5 @@
+C:\Users\fulloa\Desktop\Proyectos Desarrollo\PlataformaMovil\ITE_PlataformaMovil - copia\Core\bin\Release\Core.dll
+C:\Users\fulloa\Desktop\Proyectos Desarrollo\PlataformaMovil\ITE_PlataformaMovil - copia\Core\bin\Release\Core.pdb
+C:\Users\fulloa\Desktop\Proyectos Desarrollo\PlataformaMovil\ITE_PlataformaMovil - copia\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\fulloa\Desktop\Proyectos Desarrollo\PlataformaMovil\ITE_PlataformaMovil - copia\Core\obj\Release\Core.dll
+C:\Users\fulloa\Desktop\Proyectos Desarrollo\PlataformaMovil\ITE_PlataformaMovil - copia\Core\obj\Release\Core.pdb

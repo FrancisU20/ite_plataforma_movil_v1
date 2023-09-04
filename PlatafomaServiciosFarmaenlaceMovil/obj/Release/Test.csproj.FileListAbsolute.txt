@@ -1,0 +1,14 @@
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\PlatafomaServiciosFarmaenlaceMovil.exe.config
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\PlatafomaServiciosFarmaenlaceMovil.exe
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\PlatafomaServiciosFarmaenlaceMovil.pdb
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\Entidades.dll
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\Newtonsoft.Json.dll
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\RestSharp.dll
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\EntityFramework.dll
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\Entidades.pdb
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\Entidades.dll.config
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\bin\Release\EntityFramework.xml
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\obj\Release\Test.csproj.CoreCompileInputs.cache
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\obj\Release\Test.csproj.CopyComplete
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\obj\Release\PlatafomaServiciosFarmaenlaceMovil.exe
+E:\tf\ITE_ServiciosWeb\ITE_PlataformaMovil\PlatafomaServiciosFarmaenlaceMovil\obj\Release\PlatafomaServiciosFarmaenlaceMovil.pdb

@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "DemonioPedidosMotorizados": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

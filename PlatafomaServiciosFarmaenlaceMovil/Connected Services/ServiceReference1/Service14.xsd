@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Configuracion.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Configuracion.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2411/Service1.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Traspaso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="articulos" nillable="true" type="tns:ArrayOfDetalleTraspaso" />
+      <xs:element minOccurs="0" name="bodega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="caja" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaTraspaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="funda" type="xs:int" />
+      <xs:element minOccurs="0" name="paca" type="xs:int" />
+      <xs:element minOccurs="0" name="traspaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioFarmacia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Traspaso" nillable="true" type="tns:Traspaso" />
+  <xs:complexType name="ArrayOfDetalleTraspaso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleTraspaso" nillable="true" type="tns:DetalleTraspaso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleTraspaso" nillable="true" type="tns:ArrayOfDetalleTraspaso" />
+  <xs:complexType name="DetalleTraspaso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="barras" nillable="true" type="tns:ArrayOfR_Barra" />
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="entero" type="xs:int" />
+      <xs:element minOccurs="0" name="fraccion" type="xs:int" />
+      <xs:element minOccurs="0" name="mas" type="xs:int" />
+      <xs:element minOccurs="0" name="menos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleTraspaso" nillable="true" type="tns:DetalleTraspaso" />
+  <xs:complexType name="ArrayOfR_Barra">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="R_Barra" nillable="true" type="tns:R_Barra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfR_Barra" nillable="true" type="tns:ArrayOfR_Barra" />
+  <xs:complexType name="R_Barra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="R_Barra" nillable="true" type="tns:R_Barra" />
+  <xs:complexType name="Temporal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="data2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="identificador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Temporal" nillable="true" type="tns:Temporal" />
+  <xs:complexType name="Cookie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cookie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ipDispositivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreUsu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cookie" nillable="true" type="tns:Cookie" />
+  <xs:complexType name="ArrayOfTraspasoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TraspasoModel" nillable="true" type="tns:TraspasoModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTraspasoModel" nillable="true" type="tns:ArrayOfTraspasoModel" />
+  <xs:complexType name="TraspasoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bodega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Caja" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CajasP" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CajasV" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Check" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaPendiente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaTraspaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Funda" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FundasP" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FundasV" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTraspaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paca" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PacasP" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PacasV" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="UsuarioFarmacia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TraspasoModel" nillable="true" type="tns:TraspasoModel" />
+</xs:schema>

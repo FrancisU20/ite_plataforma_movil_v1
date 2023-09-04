@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\StyleCopPlus.MSBuild.4.7.49.5\build\StyleCopPlus.MSBuild.props" Condition="Exists('..\packages\StyleCopPlus.MSBuild.4.7.49.5\build\StyleCopPlus.MSBuild.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5071CF63-08EB-4C1D-8ED8-0BEF53EDBCA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Servicio</RootNamespace>
+    <AssemblyName>Servicio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.13.4.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.4\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EasySoft.Excepciones, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3a54e397ec5f5940, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\EasySoft.Excepciones\1.0.0.0__3a54e397ec5f5940\EasySoft.Excepciones.dll</HintPath>
+    </Reference>
+    <Reference Include="EasySoft.LogicaDatos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b63c353f3db63d1b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\EasySoft.LogicaDatos\1.0.0.0__b63c353f3db63d1b\EasySoft.LogicaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="EasySoft.Util, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8dde93529f4dee62, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\EasySoft.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneraGuiaEasyTini">
+      <HintPath>dlls\GeneraGuiaEasyTini.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicaNegociosRecepcionProxy">
+      <HintPath>dlls\LogicaNegociosRecepcionProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionBDD.cs" />
+    <Compile Include="Connected Services\PVenta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioIntegradorSAP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="dlls\JSONHelper.cs" />
+    <Compile Include="dlls\LD_AperturaCierreCaja.cs" />
+    <Compile Include="dlls\LD_GENERAL.cs" />
+    <Compile Include="dlls\LD_PlanInventario.cs" />
+    <Compile Include="dlls\LN_GENERAL.cs" />
+    <Compile Include="dlls\LN_PlanInventario.cs" />
+    <Compile Include="Implementacion\ServicioInverntarioTotal.cs" />
+    <Compile Include="Implementacion\ServicioRecepcion.cs" />
+    <Compile Include="Implementacion\ServicioInventarioMovil.cs" />
+    <Compile Include="Interfaz\IServicioInverntarioTotal.cs" />
+    <Compile Include="Interfaz\IServicioRecepcion.cs" />
+    <Compile Include="Interfaz\IServicioInventarioMovil.cs" />
+    <Compile Include="Models\ArticuloInventarioTotal.cs" />
+    <Compile Include="Models\ArticuloModel.cs" />
+    <Compile Include="Models\ArticulosPlanificacionModel.cs" />
+    <Compile Include="Models\BuscarArticuloInventarioTotalModel.cs" />
+    <Compile Include="Models\cls_Cabecera.cs" />
+    <Compile Include="Models\FarmaciaModel.cs" />
+    <Compile Include="Models\InventarioTotalModel.cs" />
+    <Compile Include="Models\PlanificacionesModel.cs" />
+    <Compile Include="Models\PlanificacionModel.cs" />
+    <Compile Include="Models\RegistroCantidadesInventarioTotal.cs" />
+    <Compile Include="Models\ResumenPlanArticulos.cs" />
+    <Compile Include="Models\StockArticuloInventario.cs" />
+    <Compile Include="Models\ValidarTraspasoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.csproj">
+      <Project>{E92DB026-9661-467B-8341-35A768D81405}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contexto\Contexto.csproj">
+      <Project>{0CA24C05-7611-4B83-B986-78505B26F607}</Project>
+      <Name>Contexto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{69A4F805-DA5A-49F2-93EE-A1DACC0A3ABD}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{872AE400-3A84-4E2F-B9DD-A620F2ECBB78}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+      <Project>{D0A6AF09-BCD7-42A6-BE9B-C5F54EB626B5}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.BC_Cajas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.BC_MovimientosBoveda_Cab.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.BC_MovimientosCaja_Cab.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.BC_PAR_Custodios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.BC_REL_TipoProcesoMovimientos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.CabeceraReceta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.Oficina.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.PV_IPCLIENTES.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.RecetaGen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.ResultadoConvenio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\Servicio.PVenta.Usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PVenta\ws_pventa.wsdl" />
+    <None Include="Connected Services\ServicioIntegradorSAP\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioIntegradorSAP\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioIntegradorSAP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PVenta\ws_pventa.disco" />
+    <None Include="Connected Services\PVenta\configuration91.svcinfo" />
+    <None Include="Connected Services\PVenta\configuration.svcinfo" />
+    <None Include="Connected Services\PVenta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="dlls\ADODB.dll" />
+    <Content Include="dlls\CommonServiceLocator.dll" />
+    <Content Include="dlls\EasySoft.Excepciones.dll" />
+    <Content Include="dlls\EasySoft.LogicaDatos.dll" />
+    <Content Include="dlls\EasySoft.Util.dll" />
+    <Content Include="dlls\LogicaNegociosRecepcionProxy.dll" />
+    <Content Include="dlls\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="dlls\Microsoft.Practices.Unity.dll" />
+    <Content Include="dlls\Unity.Abstractions.dll" />
+    <Content Include="dlls\Unity.Container.dll" />
+    <Content Include="dlls\Unity.Interception.dll" />
+    <Content Include="dlls\Unity.ServiceLocation.dll" />
+    <Content Include="dlls\Unity.Wcf.dll" />
+    <Content Include="Scripts\jszip.js" />
+    <Content Include="Scripts\jszip.min.js" />
+    <EmbeddedResource Include="ind.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ModClienteRelacionRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\servicioconsumo1.wsdl" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ActualizaDmCtaCreditoRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ActualizaDmInterlocutorRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ConsClienteRelacionIn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.CreaClienteRelacionRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I06Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I110Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I111Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I111_2Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I114Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I11Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I21Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I22Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I38Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I42Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I47Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I49Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I51Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I52Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I55Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I61Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I64aRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I67Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I68Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I74Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I91Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.I97Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ISN1Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ISN3Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.ISN4Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.SN10Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.SN11Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.SN7Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioIntegradorSAP\Servicio.ServicioIntegradorSAP.SN9Respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PVenta\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioIntegradorSAP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\StyleCopPlus.MSBuild.4.7.49.5\build\StyleCopPlus.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCopPlus.MSBuild.4.7.49.5\build\StyleCopPlus.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\StyleCop.MSBuild.6.2.0\build\StyleCop.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.6.2.0\build\StyleCop.MSBuild.targets'))" />
+  </Target>
+  <Import Project="..\packages\StyleCop.MSBuild.6.2.0\build\StyleCop.MSBuild.targets" Condition="Exists('..\packages\StyleCop.MSBuild.6.2.0\build\StyleCop.MSBuild.targets')" />
+</Project>

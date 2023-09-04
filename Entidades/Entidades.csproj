@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{872AE400-3A84-4E2F-B9DD-A620F2ECBB78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bdgeneral\OFICINA.cs" />
+    <Compile Include="bdgeneral\OFICINA_IPServer.cs" />
+    <Compile Include="bdgeneral\OFICINA_IP.cs" />
+    <Compile Include="Digitalizacion\tbl_Configuraciones.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ValidarTraspasoCF.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_DetalleTransferenciaBC.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_TemperaturaTraspaso_det.cs" />
+    <Compile Include="EasyGestionEmpresarial\Tbl_TemperaturaTraspaso_cab.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_BuscarConfiguracionSegmentoArticulo.cs" />
+    <Compile Include="EasyGestionEmpresarial\Pa_EquipararBodegaFarmacia.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_TraspasosFarmaciaOffLine.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ConsultarArtituloInventarioTotal.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticuloCadenaFrio.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_PROCESO.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_AJUSTES.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_ARCHIVOS.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_BARRAS.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_CAB_REP.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_DETALLE.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_DETALLE_USUARIO.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_LOGIN.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_MARGEN.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_OBSERVACIONES.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_PLAN.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TOTAL_SIN_FACTURAR.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_INVENTARIO_TRASPASOS.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_AuditoriaAppMovil.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_ControlPlanificaciones.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_ImpresionEtiquetas.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_PendientesVerificacion.cs" />
+    <Compile Include="EasyGestionEmpresarial\GEN_MovTraspasosDevoluciones_Cab.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_TraspasosFarmaciaVerificacion.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_TraspasoVerifMercaderia_Det.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCABOFFLINE.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODETOFFLINE.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOVERIFMERCADERIA.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_TraspasoInformeMercaderia.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_detallefact.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_maestrofact.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticulosPlanificacionResumen.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_tablas.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_LoginUsuario.cs" />
+    <Compile Include="EasyGestionEmpresarial\Oficinas.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_par_UsuarioNotificacionInconsistencia.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_RegistroAppMovil.cs" />
+    <Compile Include="EasySeguridad\Atribuciones.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_ArticulosPlanificacion.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_DatosUsuario.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_GEN_GenerarKardexFarmacia.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_GEN_GenerarKardexMatriz.cs" />
+    <Compile Include="Catalogo\PA_ObtenerFotoArticulo.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_maestromovinvent.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_movinvent.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_tmp_RecepcionMercaderia.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCABFarmacia.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODETFarmacia.cs" />
+    <Compile Include="Inconsistencias\tbl_detalle_inco_bodega.cs" />
+    <Compile Include="Inconsistencias\tbl_inco_bodega.cs" />
+    <Compile Include="Inconsistencias\tbl_motivo.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_articulos_codigosbarra.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_TraspasosFarmacia.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_Planificaciones.cs" />
+    <Compile Include="EasyGestionEmpresarial\PA_VerificacionIpFarmacia.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_ARTICULOS.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_DESCUENTOCAB.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_DESCUENTODET.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_FACTURACION.cs" />
+    <Compile Include="EasyGestionEmpresarial\PV_IpServidor.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASODET.cs" />
+    <Compile Include="EasyGestionEmpresarial\VIRT_TRASPASOCAB.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_USUARIO.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_INVENTARIO.cs" />
+    <Compile Include="EasyGestionEmpresarial\PLAN_OFICINAS.cs" />
+    <Compile Include="EasyGestionEmpresarial\tbl_articulos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
